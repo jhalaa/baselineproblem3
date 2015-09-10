@@ -14,4 +14,8 @@ public class SalesTax {
             return 5.0;
         return 0.0;
     }
+
+    public double totalTax(String inputString) {
+        return 0.0;
+    }
 }

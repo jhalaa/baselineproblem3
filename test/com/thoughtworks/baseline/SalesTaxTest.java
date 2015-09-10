@@ -48,4 +48,10 @@ public class SalesTaxTest {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.importTaxPercentage("imported pill"),5.0);
     }
+
+    @Test
+    public void shouldReturnTotalSalesTaxOfAnItemWhichHasNoSalesTaxAndIsNotImported() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.totalTax("pill"),0.0);
+    }
 }
