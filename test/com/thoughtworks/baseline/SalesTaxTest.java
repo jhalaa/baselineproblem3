@@ -18,4 +18,10 @@ public class SalesTaxTest {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTax("chocolates"),0.0);
     }
+
+    @Test
+    public void basicSalesTaxIsZeroPercentForChocolate() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.basicSalesTax("chocolate"),0.0);
+    }
 }
