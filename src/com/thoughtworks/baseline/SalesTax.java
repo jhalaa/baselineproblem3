@@ -7,6 +7,7 @@ import static java.lang.Double.parseDouble;
 //calculates the total tax of item
 public class SalesTax {
 
+    private BasicSalesTaxCalculator basicSalesTaxCalculator = new BasicSalesTaxCalculator();
     private ArrayList<String> inputString;
 
     public SalesTax(ArrayList<String> inputString) {
@@ -23,9 +24,7 @@ public class SalesTax {
     }
 
     public double basicSalesTaxPercentage(String inputString) {
-        if(inputString.contains("chocolates") || inputString.contains("chocolate") || inputString.contains("book") || inputString.contains("pill"))
-            return 0.0;
-        return 10.0;
+        return basicSalesTaxCalculator.basicSalesTaxPercentage(inputString);
     }
 
     public double importTaxPercentage(String input) {
@@ -38,7 +37,7 @@ public class SalesTax {
         String[] inputArray = input.split(" ");
         double total = parseDouble(inputArray[inputArray.length - 1]);
         double importTax = total * importTaxPercentage(input)/100;
-        double salesTax =total * basicSalesTaxPercentage(input)/100;
+        double salesTax =total * basicSalesTaxCalculator.basicSalesTaxPercentage(input) /100;
 
         return  total+ salesTax +importTax;
     }
