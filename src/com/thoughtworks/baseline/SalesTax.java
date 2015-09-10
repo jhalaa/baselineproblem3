@@ -1,5 +1,7 @@
 package com.thoughtworks.baseline;
 
+import static java.lang.Double.parseDouble;
+
 //calculates the total tax of item
 public class SalesTax {
 
@@ -16,6 +18,7 @@ public class SalesTax {
     }
 
     public double totalTax(String inputString) {
-        return 0.0;
+        String[] inputArray = inputString.split(" ");
+        return parseDouble(inputArray[inputArray.length - 1]);
     }
 }
