@@ -1,5 +1,6 @@
 package com.thoughtworks.baseline;
 
+//calculates the total tax of item
 public class SalesTax {
 
     public double basicSalesTaxPercentage(String inputString) {
