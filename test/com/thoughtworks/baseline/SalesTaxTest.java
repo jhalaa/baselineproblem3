@@ -42,4 +42,10 @@ public class SalesTaxTest {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.importTax("pill"),0.0);
     }
+
+    @Test
+    public void importTaxIsFivePercentForImportedItems() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.importTax("imported pill"),5.0);
+    }
 }

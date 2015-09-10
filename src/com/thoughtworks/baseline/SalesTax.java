@@ -8,7 +8,9 @@ public class SalesTax {
         return 10.0;
     }
 
-    public double importTax(String pill) {
+    public double importTax(String inputString) {
+        if(inputString.contains("imported"))
+            return 5.0;
         return 0.0;
     }
 }
