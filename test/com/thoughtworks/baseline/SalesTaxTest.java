@@ -10,6 +10,12 @@ public class SalesTaxTest {
     public void basicSalesTaxIsTenPercentForAllGoods() {
         SalesTax salesTax = new SalesTax();
 
-        assertEquals(salesTax.basicSalesTax(), 10.0);
+        assertEquals(salesTax.basicSalesTax("xyz"), 10.0);
+    }
+
+    @Test
+    public void basicSalesTaxIsZeroPercentForChocolates() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.basicSalesTax("chocolates"),0.0);
     }
 }
