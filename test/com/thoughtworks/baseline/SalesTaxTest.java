@@ -36,4 +36,10 @@ public class SalesTaxTest {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTax("pill"),0.0);
     }
+
+    @Test
+    public void importTaxIsZeroPercentForAllItems() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.importTax("pill"),0.0);
+    }
 }
