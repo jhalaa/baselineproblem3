@@ -19,6 +19,11 @@ public class SalesTax {
 
     public double totalTax(String inputString) {
         String[] inputArray = inputString.split(" ");
-        return parseDouble(inputArray[inputArray.length - 1]);
+        double importedTax = 0.0;
+        double total = parseDouble(inputArray[inputArray.length - 1]);
+
+        if(importTaxPercentage(inputString)!=0)
+            importedTax = importTaxPercentage(inputString)/10;
+        return importedTax + total;
     }
 }

@@ -55,4 +55,10 @@ public class SalesTaxTest {
         assertEquals(salesTax.totalTax("pill at 3.00"),3.0);
     }
 
+    @Test
+    public void shouldReturnTotalTaxedPriceOfAnItemWhichHasNoSalesTaxAndIsImported() {
+        SalesTax salesTax = new SalesTax();
+        assertEquals(salesTax.totalTax("imported pill at 10.00"),10.50);
+    }
+
 }
