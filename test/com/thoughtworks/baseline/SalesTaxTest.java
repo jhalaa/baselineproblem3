@@ -7,44 +7,44 @@ import static junit.framework.TestCase.assertEquals;
 public class SalesTaxTest {
 
     @Test
-    public void basicSalesTaxIsTenPercentForAllGoods() {
+    public void shouldReturnBasicSalesTaxAsTenPercentForAllGoods() {
         SalesTax salesTax = new SalesTax();
 
         assertEquals(salesTax.basicSalesTaxPercentage("xyz"), 10.0);
     }
 
     @Test
-    public void basicSalesTaxIsZeroPercentForChocolates() {
+    public void shouldReturnBasicSalesTaxAsZeroPercentForChocolates() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTaxPercentage("chocolates"),0.0);
     }
 
     @Test
-    public void basicSalesTaxIsZeroPercentForChocolate() {
+    public void shouldReturnBasicSalesTaxAsZeroPercentForChocolate() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTaxPercentage("chocolate"),0.0);
     }
 
     @Test
-    public void basicSalesTaxIsZeroPercentForBook() {
+    public void shouldReturnBasicSalesTaxAsZeroPercentForBook() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTaxPercentage("book"),0.0);
     }
 
     @Test
-    public void basicSalesTaxIsZeroPercentForPill() {
+    public void shouldReturnBasicSalesTaxAsZeroPercentForPill() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.basicSalesTaxPercentage("pill"),0.0);
     }
 
     @Test
-    public void importTaxIsZeroPercentForAllItems() {
+    public void shouldReturnImportTaxAsZeroPercentForAllItems() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.importTaxPercentage("pill"),0.0);
     }
 
     @Test
-    public void importTaxIsFivePercentForImportedItems() {
+    public void shouldReturnImportTaxAsFivePercentForImportedItems() {
         SalesTax salesTax = new SalesTax();
         assertEquals(salesTax.importTaxPercentage("imported pill"),5.0);
     }
