@@ -10,42 +10,42 @@ public class SalesTaxTest {
     public void basicSalesTaxIsTenPercentForAllGoods() {
         SalesTax salesTax = new SalesTax();
 
-        assertEquals(salesTax.basicSalesTax("xyz"), 10.0);
+        assertEquals(salesTax.basicSalesTaxPercentage("xyz"), 10.0);
     }
 
     @Test
     public void basicSalesTaxIsZeroPercentForChocolates() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.basicSalesTax("chocolates"),0.0);
+        assertEquals(salesTax.basicSalesTaxPercentage("chocolates"),0.0);
     }
 
     @Test
     public void basicSalesTaxIsZeroPercentForChocolate() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.basicSalesTax("chocolate"),0.0);
+        assertEquals(salesTax.basicSalesTaxPercentage("chocolate"),0.0);
     }
 
     @Test
     public void basicSalesTaxIsZeroPercentForBook() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.basicSalesTax("book"),0.0);
+        assertEquals(salesTax.basicSalesTaxPercentage("book"),0.0);
     }
 
     @Test
     public void basicSalesTaxIsZeroPercentForPill() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.basicSalesTax("pill"),0.0);
+        assertEquals(salesTax.basicSalesTaxPercentage("pill"),0.0);
     }
 
     @Test
     public void importTaxIsZeroPercentForAllItems() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.importTax("pill"),0.0);
+        assertEquals(salesTax.importTaxPercentage("pill"),0.0);
     }
 
     @Test
     public void importTaxIsFivePercentForImportedItems() {
         SalesTax salesTax = new SalesTax();
-        assertEquals(salesTax.importTax("imported pill"),5.0);
+        assertEquals(salesTax.importTaxPercentage("imported pill"),5.0);
     }
 }
